@@ -40,3 +40,45 @@ revert:	Reverts a previous commit.
 
 
 
+## SOLID
+
+### Single Responsibility Principle (SRP)
+
+Une classe ne doit avoir qu'une seule raison de changer (une seule responsabilité).
+Une responsabilité n'est pas une opération / méthode, mais plutôt une raison d'être. Elle existe 
+et à l'obligatio de faire ce qui lui est nécessaire pour remplir son but.
+Exemple du chien : 
+    Violation : 
+
+    class Chien {
+    void aboyer() { System.out.println("Woof !"); }
+    void manger() { System.out.println("Mange..."); }
+    void marcher() { System.out.println("Marche..."); }
+    void toiletter() { System.out.println("Toilette..."); }
+    void sauvegarderEnBDD() { System.out.println("Sauvegarde en BDD..."); } 
+}
+
+    Correction : 
+    
+    class Chien {
+    void aboyer() { System.out.println("Woof !"); }
+    void manger() { System.out.println("Mange..."); }
+    void marcher() { System.out.println("Marche..."); }
+}
+
+class Toiletteur {  // Classe séparée pour le toilettage
+    void toiletter(Chien chien) { System.out.println("Toilette le chien..."); }
+}
+
+class ChienRepository {  // Classe séparée pour la persistance
+    void sauvegarder(Chien chien) { System.out.println("Sauvegarde le chien en BDD..."); }
+}
+
+
+### Open/Closed Principle (OCP)
+
+### Liskov Substitution Principle (LSP)
+
+### Interface Segregation Principle (ISP)
+
+### Dependency Inversion Principle (DIP)
