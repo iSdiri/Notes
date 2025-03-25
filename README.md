@@ -5,21 +5,23 @@
 
 ### Commit
 
-<type>(<scope>): <subject>
-<BLANK LINE>
-<body>
-<BLANK LINE>
-<footer>
+#### Model : 
 
-<type>: Décris la raison du commit (ex.: feat, fix, docs).
+type(scope): subject
 
-<scope> (optionnel): Specifie la partie du codebase affectée (ex.: auth, navbar, config).
+body
 
-<subject>: Sommaire concis des changements
+footer
 
-<body> (optionnel): Description détaillée des changements.
+type: Décris la raison du commit (ex.: feat, fix, docs).
 
-<footer> (optionnel): Référence (e.g., Closes #123) ou changement qui brisent quelque chose.
+scope: (optionnel): Specifie la partie du codebase affectée (ex.: auth, navbar, config).
+
+subject: Sommaire concis des changements
+
+body: (optionnel): Description détaillée des changements.
+
+footer: (optionnel): Référence (e.g., Closes #123) ou changement qui brisent quelque chose.
 
 #### Types
 feat:	A new feature (triggers a minor version bump in SemVer).
