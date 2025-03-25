@@ -13,6 +13,8 @@ body
 
 footer
 
+
+
 type: Décris la raison du commit (ex.: feat, fix, docs).
 
 scope: (optionnel): Specifie la partie du codebase affectée (ex.: auth, navbar, config).
