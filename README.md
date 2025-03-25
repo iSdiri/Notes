@@ -48,7 +48,8 @@ Une classe ne doit avoir qu'une seule raison de changer (une seule responsabilit
 Une responsabilité n'est pas une opération / méthode, mais plutôt une raison d'être. Elle existe 
 et à l'obligatio de faire ce qui lui est nécessaire pour remplir son but.
 Exemple du chien : 
-    Violation : 
+
+#### Violation : 
 
     class Chien {
     void aboyer() { System.out.println("Woof !"); }
@@ -58,7 +59,7 @@ Exemple du chien :
     void sauvegarderEnBDD() { System.out.println("Sauvegarde en BDD..."); } 
 }
 
-    Correction : 
+#### Correction : 
     
     class Chien {
     void aboyer() { System.out.println("Woof !"); }
@@ -66,11 +67,11 @@ Exemple du chien :
     void marcher() { System.out.println("Marche..."); }
 }
 
-class Toiletteur {  // Classe séparée pour le toilettage
+    class Toiletteur {  // Classe séparée pour le toilettage
     void toiletter(Chien chien) { System.out.println("Toilette le chien..."); }
 }
 
-class ChienRepository {  // Classe séparée pour la persistance
+    class ChienRepository {  // Classe séparée pour la persistance
     void sauvegarder(Chien chien) { System.out.println("Sauvegarde le chien en BDD..."); }
 }
 
